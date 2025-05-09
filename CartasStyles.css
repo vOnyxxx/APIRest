@@ -1,0 +1,96 @@
+/* === Estilos globales del cuerpo === */
+body {
+    font-family: Arial, sans-serif; /* Fuente predeterminada */
+    background-color: #d3d3d3; /* Color de fondo gris claro */
+    display: flex; /* Habilita flexbox para centrar contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    margin: 0; /* Elimina el margen por defecto */
+}
+
+/* === Contenedor principal que aloja las tarjetas === */
+.container {
+    display: flex; /* Usa flexbox para alinear las tarjetas */
+    gap: 20px; /* Espacio entre las tarjetas */
+    background: #c4c4c4; /* Color de fondo del contenedor */
+    padding: 30px; /* Espaciado interno */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para efecto elevado */
+    justify-content: center; /* Centra los elementos dentro */
+    flex-wrap: wrap; /* Permite que las tarjetas se acomoden en varias líneas */
+    max-width: 90%; /* Evita que el contenedor sea demasiado ancho */
+}
+
+/* === Estilos generales para las tarjetas === */
+.card {
+    background: white; /* Fondo blanco */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para efecto flotante */
+    width: 300px; /* Ancho fijo */
+    overflow: hidden; /* Evita que el contenido sobresalga */
+    transition: transform 0.3s ease-in-out; /* Animación suave */
+    display: flex; /* Usa flexbox para estructurar la tarjeta */
+    flex-direction: column; /* Apila los elementos verticalmente */
+}
+
+/* === Efecto al pasar el mouse sobre la tarjeta (zoom ligero) === */
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* === Contenedor de la imagen dentro de la tarjeta === */
+.card-image {
+    width: 100%; /* Ocupa todo el ancho de la tarjeta */
+    height: 180px; /* Altura fija para uniformidad */
+    overflow: hidden; /* Evita desbordamiento de la imagen */
+}
+
+/* === Imagen dentro de la tarjeta (se ajusta y recorta si es necesario) === */
+.card-image img {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: 100%; /* Ocupa toda la altura del contenedor */
+    object-fit: cover; /* Ajusta la imagen sin distorsión */
+}
+
+/* === Contenido textual de la tarjeta === */
+.card-content {
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Centra el texto */
+    flex-grow: 1; /* Permite que el contenido crezca y mantenga la estructura */
+    display: flex; /* Usa flexbox para estructurar el contenido */
+    flex-direction: column; /* Ordena elementos en columna */
+    justify-content: space-between; /* Distribuye los elementos equitativamente */
+}
+
+/* === Título dentro de la tarjeta === */
+h2 {
+    font-size: 22px; /* Tamaño del texto */
+    font-weight: bold; /* Negrita */
+    margin: 10px 0; /* Espaciado superior e inferior */
+}
+
+/* === Texto descriptivo dentro de la tarjeta === */
+p {
+    font-size: 14px; /* Tamaño de la fuente */
+    color: #333; /* Color oscuro para mejor lectura */
+    flex-grow: 1; /* Permite que el texto ocupe el espacio restante */
+}
+
+/* === Botón de acción dentro de la tarjeta === */
+.btn {
+    background: #ff9800; /* Color naranja */
+    color: black; /* Texto en blanco */
+    border: none; /* Sin borde */
+    padding: 10px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor en forma de mano */
+    transition: background 0.3s; /* Transición de color */
+    width: 100%; /* Ocupa todo el ancho */
+}
+
+/* === Efecto hover en el botón (oscurece el color) === */
+.btn:hover {
+    background: #D9D4CD;
+}
